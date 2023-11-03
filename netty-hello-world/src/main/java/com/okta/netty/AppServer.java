@@ -9,7 +9,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 public class AppServer {
 
-    private static final int HTTP_PORT = 8080;
+    private static final int HTTP_PORT = 8085;
 
     public void run() throws Exception {
 
