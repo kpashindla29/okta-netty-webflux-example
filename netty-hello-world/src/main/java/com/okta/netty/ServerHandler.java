@@ -11,7 +11,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<FullHttpRequest> 
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, FullHttpRequest msg) {
-        ByteBuf content = Unpooled.copiedBuffer("Hello World!", CharsetUtil.UTF_8);
+        ByteBuf content = Unpooled.copiedBuffer("Hello World!, This is coming from Handler!!!", CharsetUtil.UTF_8);
         FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK, content);
         response.headers().set(HttpHeaderNames.CONTENT_TYPE, "text/html");
         response.headers().set(HttpHeaderNames.CONTENT_LENGTH, content.readableBytes());
